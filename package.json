@@ -1,0 +1,22 @@
+{
+  "name": "kfc-auto-sender",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --require dotenv/config.js dist/index.js",
+    "dev": "ts-node --require dotenv/config.js src/index.ts",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "neos-client": "^0.6.0"
+  }
+}
