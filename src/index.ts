@@ -8,10 +8,13 @@ if (!NEOS_USERNAME || !NEOS_PASSWORD) {
   );
 }
 
-const neos = new Neos({
-  username: NEOS_USERNAME,
-  password: NEOS_PASSWORD,
-});
+const neos = new Neos(
+  {
+    username: NEOS_USERNAME,
+    password: NEOS_PASSWORD,
+  },
+  { useEvents: true, autoSync: true }
+);
 
 neos.on("FriendRequested", async (friend: NeosType.Friend.NeosFriend) => {
   try {
